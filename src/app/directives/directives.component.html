@@ -1,0 +1,11 @@
+<div class="container mt-5">
+    <button class="btn btn-primary my-3" (click)="showPeople()">{{ text }}</button>
+    <div *ngIf="show">
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let person of people" (click)="getPerson(person)">
+                <p>{{ person.lastname }}, {{ person.name}}</p>
+                <p>{{ person.age }}</p>
+            </li>
+        </ul>
+    </div>
+</div>

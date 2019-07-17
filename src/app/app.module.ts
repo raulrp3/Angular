@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PrincipalComponent } from './principal/principal.component';
 import { DatabindingComponent } from './databinding/databinding.component';
+import { DirectivesComponent } from './directives/directives.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PrincipalComponent,
-    DatabindingComponent
+    DatabindingComponent,
+    DirectivesComponent
   ],
   imports: [
     BrowserModule,
@@ -19,6 +21,6 @@ import { DatabindingComponent } from './databinding/databinding.component';
     FormsModule
   ],
   providers: [],
-  bootstrap: [DatabindingComponent]
+  bootstrap: [DirectivesComponent]
 })
 export class AppModule { }

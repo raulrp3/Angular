@@ -1,0 +1,13 @@
+<div class="container mt-5">
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let person of people">
+            <p>ID: {{ person.id }}</p>
+            <p>Nombre: {{ person.name | mName: person.lastname | titlecase}}</p>
+            <p>Salario: {{ person.salary | number:'3.1' }}</p>
+        </li>
+    </ul>
+    <div class="mt-3">
+        <p>JSON</p>
+        <pre>{{ people | json }}</pre>
+    </div>
+</div>

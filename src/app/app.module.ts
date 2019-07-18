@@ -7,13 +7,17 @@ import { AppComponent } from './app.component';
 import { PrincipalComponent } from './principal/principal.component';
 import { DatabindingComponent } from './databinding/databinding.component';
 import { DirectivesComponent } from './directives/directives.component';
+import { PipesComponent } from './pipes/pipes.component';
+import { MPipePipe } from './m-pipe.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     PrincipalComponent,
     DatabindingComponent,
-    DirectivesComponent
+    DirectivesComponent,
+    PipesComponent,
+    MPipePipe
   ],
   imports: [
     BrowserModule,
@@ -21,6 +25,6 @@ import { DirectivesComponent } from './directives/directives.component';
     FormsModule
   ],
   providers: [],
-  bootstrap: [DirectivesComponent]
+  bootstrap: [PipesComponent]
 })
 export class AppModule { }

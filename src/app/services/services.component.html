@@ -1,0 +1,9 @@
+<div class="container my-3">
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let product of mProducts">
+            <p>{{ product.value.uuid }}</p>
+            <p>{{ product.value.nombre }}</p>
+            <p>{{ product.value.marca }}</p>
+        </li>
+    </ul>
+</div>

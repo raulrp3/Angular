@@ -1,0 +1,22 @@
+<div class="container my-5">
+    <table class="table table-striped text-center">
+        <thead>
+            <tr>
+                <th>NAME</th>
+                <th>STATUS</th>
+                <th>SPECIES</th>
+                <th>TYPE</th>
+                <th>GENDER</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let person of mPeople">
+                <td>{{ person.name }}</td>
+                <td>{{ person.status }}</td>
+                <td>{{ person.species }}</td>
+                <td>{{ person.type }}</td>
+                <td>{{ person.gender }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

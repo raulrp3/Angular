@@ -16,6 +16,11 @@ import { ServicesComponent } from './services/services.component';
 import { ProductsService } from './services/products.service';
 import { PeopleComponent } from './people/people.component';
 import { PeopleService } from './services/people.service';
+import { FirebaseComponent } from './firebase/firebase.component';
+import { FirebaseService } from './services/firebase.service';
+import { environment } from '../environments/environment';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireModule } from 'angularfire2';
 
 const routes: Routes = [
   { path: '', component: PrincipalComponent},
@@ -24,7 +29,8 @@ const routes: Routes = [
   { path: 'pipes', component: PipesComponent},
   { path: 'forms', component: FormsComponent},
   { path: 'services', component: ServicesComponent},
-  { path: 'rest_people', component: PeopleComponent}
+  { path: 'rest_people', component: PeopleComponent},
+  { path: 'firebase', component: FirebaseComponent}
 ];
 
 @NgModule({
@@ -37,7 +43,8 @@ const routes: Routes = [
     MPipePipe,
     FormsComponent,
     ServicesComponent,
-    PeopleComponent
+    PeopleComponent,
+    FirebaseComponent
   ],
   imports: [
     BrowserModule,
@@ -45,9 +52,11 @@ const routes: Routes = [
     FormsModule,
     ReactiveFormsModule,
     RouterModule.forRoot(routes),
-    HttpClientModule
+    HttpClientModule,
+    AngularFireDatabaseModule,
+    AngularFireModule.initializeApp(environment.firebase)
   ],
-  providers: [ProductsService, PeopleService],
+  providers: [ProductsService, PeopleService, FirebaseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
